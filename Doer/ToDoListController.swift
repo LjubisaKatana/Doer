@@ -14,14 +14,23 @@ class ToDoListController: UITableViewController {
 
 	var itemArray = ["Jedan", "Dva", "Tri"]
 	
+	let defaults = UserDefaults.standard
+	
 	// MARK: View Life Cycle
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		
-	}
 
+		/*
+		if let item = defaults.array(forKey: "ToDoListArray") as? [String] {
+			itemArray = item
+		}
+		*/
+		
+		guard let item = defaults.array(forKey: "ToDoListArray") as? [String] else { return }
+		itemArray = item
+	}
+	
 	// MARK: TableView Datasource
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,7 +67,10 @@ class ToDoListController: UITableViewController {
 		let alert = UIAlertController(title: "Add New To Do Item", message: "", preferredStyle: .alert)
 	
 		let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
-			self.itemArray.append(textFiled.text!) // Mora da se forsuje jer ne moze da bude nil moze samo prazan string tako da posle treba da se sredi(ili difoltna vrednost sto je lose ili da se spreci ako nema teksta)
+			self.itemArray.append(textFiled.text!) // Mora da se forsuje jer ne moze da bude nil moze samo prazan string tako da posle treba da se sredi
+			
+			self.defaults.set(self.itemArray, forKey: "ToDoListArray")
+			
 			self.tableView.reloadData()
 		}
 	
