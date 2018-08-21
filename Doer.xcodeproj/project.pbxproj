@@ -56,9 +56,9 @@
 		EA30D3FC212ABC2000DB9DA9 /* Doer */ = {
 			isa = PBXGroup;
 			children = (
+				EA30D3FD212ABC2000DB9DA9 /* AppDelegate.swift */,
 				EA30D412212AE5CF00DB9DA9 /* Controllers */,
 				EA30D411212AE5A200DB9DA9 /* Data Model */,
-				EA30D3FD212ABC2000DB9DA9 /* AppDelegate.swift */,
 				EA30D414212AE62B00DB9DA9 /* Views */,
 				EA30D413212AE5FC00DB9DA9 /* Supporting Files */,
 				EA30D409212ABC2000DB9DA9 /* Info.plist */,

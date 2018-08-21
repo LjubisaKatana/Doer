@@ -8,7 +8,10 @@
 
 import Foundation
 
-class Item {
+// Codible = Encodible, Decodible
+
+class Item: Codable {
+	// When I use Encodible protocol i Class, we must use standard data types!
 	var title: String = ""
 	var done: Bool = false
 }
