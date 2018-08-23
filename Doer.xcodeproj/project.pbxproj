@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8878B98925C3407DCED388D1 /* Pods_Doer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97F400F49BFE349469D8F16 /* Pods_Doer.framework */; };
 		EA30D3FE212ABC2000DB9DA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30D3FD212ABC2000DB9DA9 /* AppDelegate.swift */; };
 		EA30D400212ABC2000DB9DA9 /* ToDoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30D3FF212ABC2000DB9DA9 /* ToDoListVC.swift */; };
 		EA30D403212ABC2000DB9DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA30D401212ABC2000DB9DA9 /* Main.storyboard */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		76B3F0699A76CFF3DA4A1936 /* Pods-Doer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doer/Pods-Doer.debug.xcconfig"; sourceTree = "<group>"; };
+		C97F400F49BFE349469D8F16 /* Pods_Doer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Doer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF73890DF56A7AE444B3C675 /* Pods-Doer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Doer/Pods-Doer.release.xcconfig"; sourceTree = "<group>"; };
 		EA30D3FA212ABC2000DB9DA9 /* Doer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA30D3FD212ABC2000DB9DA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA30D3FF212ABC2000DB9DA9 /* ToDoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListVC.swift; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8878B98925C3407DCED388D1 /* Pods_Doer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E1F25D09C64E491AEB3071E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C97F400F49BFE349469D8F16 /* Pods_Doer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		730A0A4C5BE7D592D5D68796 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76B3F0699A76CFF3DA4A1936 /* Pods-Doer.debug.xcconfig */,
+				CF73890DF56A7AE444B3C675 /* Pods-Doer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EA30D3F1212ABC2000DB9DA9 = {
 			isa = PBXGroup;
 			children = (
 				EA30D3FC212ABC2000DB9DA9 /* Doer */,
 				EA30D3FB212ABC2000DB9DA9 /* Products */,
+				730A0A4C5BE7D592D5D68796 /* Pods */,
+				1E1F25D09C64E491AEB3071E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA30D40C212ABC2000DB9DA9 /* Build configuration list for PBXNativeTarget "Doer" */;
 			buildPhases = (
+				9F83D19A8FA0E16EFB402F9D /* [CP] Check Pods Manifest.lock */,
 				EA30D3F6212ABC2000DB9DA9 /* Sources */,
 				EA30D3F7212ABC2000DB9DA9 /* Frameworks */,
 				EA30D3F8212ABC2000DB9DA9 /* Resources */,
+				436712E355B86B5F75114C81 /* [CP] Embed Pods Frameworks */,
+				9C40924CE5CAD8C521193341 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +195,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		436712E355B86B5F75114C81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Doer/Pods-Doer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Doer/Pods-Doer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C40924CE5CAD8C521193341 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Doer/Pods-Doer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F83D19A8FA0E16EFB402F9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Doer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA30D3F6212ABC2000DB9DA9 /* Sources */ = {
@@ -312,6 +395,7 @@
 		};
 		EA30D40D212ABC2000DB9DA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76B3F0699A76CFF3DA4A1936 /* Pods-Doer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -327,6 +411,7 @@
 		};
 		EA30D40E212ABC2000DB9DA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF73890DF56A7AE444B3C675 /* Pods-Doer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
